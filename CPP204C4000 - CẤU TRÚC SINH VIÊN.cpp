@@ -8,7 +8,7 @@ struct SinhVien{
 	float pt;
 };
 
-void nhap(struct SinhVien &SV){
+void nhapThongTinSV(struct SinhVien &SV){
 	char s;
 	getline(cin, SV.name);
 	cin >> SV.clas;
@@ -17,8 +17,8 @@ void nhap(struct SinhVien &SV){
 	cin >> SV.pt;
 }
 
-void in(struct SinhVien SV){
-	cout << "B20DCCN001" << " ";
+void inThongTinSV(struct SinhVien SV){
+	cout << "N20DCCN001" << " ";
 	cout << SV.name << " " << SV.clas << " ";
 	printf("%02d/%02d/%04d ", SV.day, SV.month, SV.year);
 	cout << fixed << setprecision(2) << SV.pt;
@@ -26,7 +26,7 @@ void in(struct SinhVien SV){
 
 int main(){
     struct SinhVien a;
-    nhap(a);
-    in(a);
+    nhapThongTinSV(a);
+    inThongTinSV(a);
     return 0;
 }
