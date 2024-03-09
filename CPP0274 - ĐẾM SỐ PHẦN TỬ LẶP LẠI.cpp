@@ -33,3 +33,28 @@ int main(){
 	solve();
 	return 0;
 }
+
+//Sử dụng map
+void solve(){
+	ios_base::sync_with_stdio(0);
+	int t; cin >> t;
+	while(t--){
+		int n; cin >> n;
+		map<int, int> mp;
+		for(int i = 0; i < n; ++i){
+			int x; cin >> x;
+			mp[x]++;
+		}
+		int cnt = 0;
+		for(auto x : mp){
+			if(x.second > 1)
+				cnt += x.second;
+		}
+		cout << cnt << "\n";
+	}
+}
+
+int main(){
+    solve();
+    return 0;
+}
